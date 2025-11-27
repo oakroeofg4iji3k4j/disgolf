@@ -13,7 +13,7 @@ type Bot struct {
 
 // New constructs a Bot, from a authentication token.
 func New(token string) (*Bot, error) {
-	session, err := discordgo.New("Bot " + token)
+	session, err := discordgo.New(token)
 	if err != nil {
 		return nil, err
 	}
